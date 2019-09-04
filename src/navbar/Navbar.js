@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 const Navbar = () => {
 	const giveColorToLi = liHref => {
@@ -25,5 +26,7 @@ const Navbar = () => {
 		</nav>
 	);
 };
-
-export default Navbar;
+const mapStateToProps = state => ({
+	userData: state.loginUser.userData
+});
+export default connect(mapStateToProps)(Navbar);

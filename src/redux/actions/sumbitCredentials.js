@@ -1,12 +1,13 @@
 import sendRequest from "../../lib/authRequest";
-const submitCredentials = (url, userCredentials) => dispatch => {
+const submitCredentials = (url, userCredentials, ownProps) => dispatch => {
 	return sendRequest(url, userCredentials)
 		.then(data => {
 			console.log("success");
 			dispatch({
 				type: "LOGIN_USER",
-				payload: data
+				payload: "yeeej no user data comes from request"
 			});
+			ownProps.history.push("/notes");
 		})
 		.catch(err => console.error("invalid username or parrword"));
 };

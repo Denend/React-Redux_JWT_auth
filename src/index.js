@@ -8,8 +8,10 @@ import { Provider } from "react-redux";
 import logger from "redux-logger";
 import thunk from "redux-thunk";
 import loginReducer from "./redux/reducers/loginReducer";
+import notesReducer from "./redux/reducers/notesReducer";
 const allReducers = combineReducers({
-	loginUser: loginReducer
+	loginUser: loginReducer,
+	notesReducer: notesReducer
 });
 const store = createStore(
 	allReducers,

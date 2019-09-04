@@ -1,8 +1,5 @@
 const initialState = {
-	fetching: false,
-	fetched: false,
-	userData: {},
-	error: null
+	userData: {}
 };
 const loginReducer = (state = initialState, { type, payload }) => {
 	{
