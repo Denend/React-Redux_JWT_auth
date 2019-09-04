@@ -1,16 +1,19 @@
 import React from "react";
 import submitCredentials from "../redux/actions/sumbitCredentials";
 import { connect } from "react-redux";
+import sendRequest from "../lib/authRequest";
 
 class Login extends React.Component {
 	componentDidMount() {
-		const userCredentials = {
-			username: "RXNyqzAG",
-			password: "8317f8OJGP32"
-		};
-		this.props.submitCredentials(userCredentials);
+		// this.props.submitCredentials(url, userCredentials);
 	}
 	render() {
+		const userCredentials = JSON.stringify({
+			username: "RXNyqzAG",
+			password: "8317f8OJGP32"
+		});
+		const url =
+			"http://frontend-recruitment.one2tribe.pl:8080/api/authenticate";
 		return (
 			<div className="loginWrapper">
 				<br />
@@ -28,7 +31,13 @@ class Login extends React.Component {
 							type="password"
 						></input>
 						<br />
-						<button id="submitLoginForm">Log in</button>
+						<button
+							type="button"
+							id="submitLoginForm"
+							onClick={() => this.props.submitCredentials(url, userCredentials)}
+						>
+							Log in
+						</button>
 					</div>
 				</form>
 			</div>
@@ -37,8 +46,8 @@ class Login extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-	submitCredentials: userCredentials =>
-		dispatch(submitCredentials(userCredentials))
+	submitCredentials: (url, userCredentials) =>
+		dispatch(submitCredentials(url, userCredentials))
 });
 export default connect(
 	null,
