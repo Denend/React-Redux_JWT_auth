@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const Navbar = props => {
-  console.log(props);
   return (
     <nav className="navbarWrapper">
       <ul className="navBar">

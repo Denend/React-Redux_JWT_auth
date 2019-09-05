@@ -3,7 +3,6 @@ import { notySuccess, notyError } from "../../lib/noty";
 const submitCredentials = (url, userCredentials, ownProps) => dispatch => {
   return sendRequest(url, userCredentials)
     .then(data => {
-      console.log("success");
       notySuccess("success");
       dispatch({
         type: "LOGIN_USER",

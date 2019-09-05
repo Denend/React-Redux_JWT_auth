@@ -1,28 +1,19 @@
 import React from "react";
 import submitCredentials from "../redux/actions/sumbitCredentials";
 import { connect } from "react-redux";
-import sendRequest from "../lib/authRequest";
 import { withFormik } from "formik";
+import { notyError } from "../lib/noty";
 
 class Login extends React.Component {
-  componentDidMount() {
-    // this.props.submitCredentials(url, userCredentials);
-  }
-
   handleSubmit = e => {
     e.preventDefault();
     this.props.handleSubmit(e);
   };
   render() {
-    console.log(this.props);
-    const userCredentials = JSON.stringify({
-      username: "RXNyqzAG",
-      password: "8317f8OJGP32"
-    });
     const url =
       "http://frontend-recruitment.one2tribe.pl:8080/api/authenticate";
 
-    const { handleChange, handleSubmit } = this.props;
+    const { handleChange } = this.props;
     return (
       <div className="loginWrapper">
         <h3>Please login to write some notes</h3>
@@ -57,6 +48,11 @@ class Login extends React.Component {
   }
 }
 
+const validateInputs = values => {
+  const { inputUsername, inputPass } = values;
+  return inputUsername && inputPass;
+};
+
 const mapDispatchToProps = (dispatch, ownProps) => ({
   submitCredentials: (url, userCredentials) =>
     dispatch(submitCredentials(url, userCredentials, ownProps))
@@ -74,7 +70,11 @@ const form = {
     const url =
       "http://frontend-recruitment.one2tribe.pl:8080/api/authenticate";
 
-    props.submitCredentials(url, myUserCredentials);
+    if (validateInputs(values)) {
+      props.submitCredentials(url, myUserCredentials);
+    } else {
+      notyError("cant submit empty fields");
+    }
   },
   validateOnBlur: false,
   validateOnChange: false,
