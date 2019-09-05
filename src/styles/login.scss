@@ -1,28 +1,29 @@
 .loginWrapper {
-	width: 600px;
-	margin: auto;
-	input {
-		width: 100%;
-		padding: 12px 20px;
-		margin: 8px 0;
-		box-sizing: border-box;
-		border-radius: 4px;
-	}
+  width: 600px;
+  margin: auto;
 
-	input:hover {
-		background-color: lightblue;
-	}
-	button {
-		background: #e27575;
-		border: none;
-		padding: 10px 25px 10px 25px;
-		color: #fff;
-		box-shadow: 1px 1px 5px #b6b6b6;
-		border-radius: 3px;
-		text-shadow: 1px 1px 1px #9e3f3f;
-		cursor: pointer;
-	}
-	button:hover {
-		background: #cf7a7a;
-	}
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  input:hover {
+    background-color: lightblue;
+  }
+  button {
+    background: #e27575;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #fff;
+    box-shadow: 1px 1px 5px #b6b6b6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #9e3f3f;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #cf7a7a;
+  }
 }

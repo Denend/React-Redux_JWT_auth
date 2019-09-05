@@ -1,37 +1,36 @@
 .navbarWrapper {
-	display: flex;
-	align-items: center;
-	background-color: $navbar-bgr-color;
-	justify-content: space-around;
+  display: flex;
+  align-items: center;
+  background-color: $navbar-bgr-color;
+  justify-content: space-around;
 }
 
 .navBar {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	display: flex;
-	flex-direction: row;
-	width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 
-	//flex-wrap: nowrap;
+  //flex-wrap: nowrap;
 
-	li {
-		width: 50%;
-		a {
-			display: block;
-			color: white;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 18px;
-			font-weight: 300;
-		}
-		a:hover {
-			color: yellow;
-		}
-		a:active {
-			color: yellow;
-		}
-	}
+  width: 50%;
+  a {
+    width: 50%;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .active {
+    color: yellow;
+  }
+  a:hover {
+    color: yellow;
+  }
 }
