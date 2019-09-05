@@ -1,41 +1,41 @@
 .notesContainer {
-  width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
+	width: 600px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
 
-  input {
-    width: 400px;
-    height: 200px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 4px;
-  }
+	input {
+		width: 400px;
+		height: 200px;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+		border-radius: 4px;
+	}
 
-  input:hover {
-    background-color: lightblue;
-  }
-  button {
-    width: 100px;
-    background: #e27575;
-    border: none;
-    padding: 10px 25px 10px 25px;
-    color: #fff;
-    box-shadow: 1px 1px 5px #b6b6b6;
-    border-radius: 3px;
-    text-shadow: 1px 1px 1px #9e3f3f;
-    cursor: pointer;
-  }
-  button:hover {
-    background: #cf7a7a;
-  }
+	input:hover {
+		background-color: lightblue;
+	}
+	button {
+		width: 100px;
+		background: $button-bgr;
+		border: none;
+		padding: 10px 25px 10px 25px;
+		color: #fff;
+		box-shadow: 1px 1px 5px #b6b6b6;
+		border-radius: 3px;
+		text-shadow: 1px 1px 1px #9e3f3f;
+		cursor: pointer;
+	}
+	button:hover {
+		background: #cf7a7a;
+	}
 
-  .notesForm {
-    display: flex;
-    flex-direction: column;
-  }
-  .notesWrapper {
-    min-width: 450px;
-  }
+	.notesForm {
+		display: flex;
+		flex-direction: column;
+	}
+	.notesWrapper {
+		min-width: 450px;
+	}
 }
