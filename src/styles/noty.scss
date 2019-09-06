@@ -1,63 +1,63 @@
 .noty {
-	&_layout {
-		position: fixed;
-		left: 89%;
-		top: 65px;
-		z-index: 1;
-		padding: 0;
-		margin: 0;
-	}
+  &_layout {
+    position: fixed;
+    left: 85%;
+    top: 65px;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+  }
 
-	&_bar {
-		width: 160px;
-		position: relative;
-		padding: 15px;
-		margin-bottom: 8px;
-		line-height: 1.3125;
-		color: white;
-		background-color: greenyellow;
+  &_bar {
+    width: 160px;
+    position: relative;
+    padding: 15px;
+    margin-bottom: 8px;
+    line-height: 1.3125;
+    color: white;
+    background-color: greenyellow;
 
-		border-radius: 4px;
-		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.13);
-	}
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.13);
+  }
 
-	&_body {
-		display: flex;
-		justify-content: center;
-	}
+  &_body {
+    display: flex;
+    justify-content: center;
+  }
 
-	&_effects_open {
-		animation: noty_anim_in 1s;
-		animation-fill-mode: forwards;
-	}
-	&_effects_close {
-		animation: noty_anim_out 1s;
-		animation-fill-mode: forwards;
-	}
-	&_type__success {
-		background-color: #01ff70;
-	}
-	&_type__error {
-		background-color: #ff4136;
-	}
+  &_effects_open {
+    animation: noty_anim_in 1s;
+    animation-fill-mode: forwards;
+  }
+  &_effects_close {
+    animation: noty_anim_out 1s;
+    animation-fill-mode: forwards;
+  }
+  &_type__success {
+    background-color: #01ff70;
+  }
+  &_type__error {
+    background-color: #ff4136;
+  }
 }
 
 @keyframes noty_anim_out {
-	0% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 1;
+  }
 
-	100% {
-		opacity: 0;
-	}
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes noty_anim_in {
-	0% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
 
-	100% {
-		opacity: 1;
-	}
+  100% {
+    opacity: 1;
+  }
 }
